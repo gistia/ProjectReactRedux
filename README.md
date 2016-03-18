@@ -1,0 +1,3 @@
+# ProjektReactRedux
+
+To be continued...
