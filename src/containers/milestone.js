@@ -8,7 +8,6 @@ class Milestone extends Component {
   constructor(props) {
     super(props);
     this.state = {showTasks: false};
-    console.log(this.state);
   }
 
   onMilestoneClicked() {

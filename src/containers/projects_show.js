@@ -26,8 +26,6 @@ class ProjectsShow extends Component {
   render() {
     const { project } = this.props;
 
-    console.log(project);
-
     if (!project) {
       return <div>Loading...</div>;
     }
