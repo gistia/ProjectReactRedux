@@ -3,9 +3,8 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
 
-import Milestone from '../components/milestone';
+import Milestone from './milestone';
 import { fetchProject } from '../actions/index';
-import { fetchMilestones } from '../actions/index';
 
 class ProjectsShow extends Component {
   // this injects the router into the React context,
@@ -14,7 +13,6 @@ class ProjectsShow extends Component {
 
   componentWillMount() {
     this.props.fetchProject(this.props.params.id);
-    this.props.fetchMilestones(this.props.params.id);
   }
 
   renderMilestones() {
@@ -26,9 +24,11 @@ class ProjectsShow extends Component {
   }
 
   render() {
-    const { project, milestones } = this.props;
+    const { project } = this.props;
 
-    if (!project || !milestones) {
+    console.log(project);
+
+    if (!project) {
       return <div>Loading...</div>;
     }
 
@@ -99,13 +99,12 @@ class ProjectsShow extends Component {
 
 function mapStateToProps(state) {
   return {
-    project: state.projects.project,
-    milestones: state.projects.milestones
+    project: state.projects.project
   };
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchProject, fetchMilestones }, dispatch);
+  return bindActionCreators({ fetchProject }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProjectsShow);
