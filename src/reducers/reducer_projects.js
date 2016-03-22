@@ -25,7 +25,7 @@ export default function(state = INITIAL_STATE, action) {
         }
         return milestone;
       });
-      const project = { ...project, milestones };
+      const project = { ...state.project, milestones };
 
       return { ...state, project };
   }
