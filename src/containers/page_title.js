@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
-export default class PageTitle extends Component {
+class PageTitle extends Component {
   render() {
     return (
       <div className="page-head projects-page">
@@ -15,3 +17,11 @@ export default class PageTitle extends Component {
     )
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    title: state.page.title
+  };
+}
+
+export default connect(mapStateToProps)(PageTitle);

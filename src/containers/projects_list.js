@@ -3,10 +3,12 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
 
+import { setTitle } from '../actions/index';
 import { fetchProjects } from '../actions/index';
 
 class ProjectsList extends Component {
   componentWillMount() {
+    this.props.setTitle('Projects');
     this.props.fetchProjects();
   }
 
@@ -58,7 +60,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchProjects }, dispatch);
+  return bindActionCreators({ setTitle, fetchProjects }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProjectsList);

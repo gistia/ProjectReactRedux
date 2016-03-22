@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router';
 
 import Milestone from './milestone';
+import { setTitle } from '../actions/index';
 import { fetchProject } from '../actions/index';
 
 class ProjectsShow extends Component {
@@ -13,6 +14,10 @@ class ProjectsShow extends Component {
 
   componentWillMount() {
     this.props.fetchProject(this.props.params.id);
+  }
+
+  componentDidUpdate() {
+    this.props.setTitle(this.props.project.name);
   }
 
   renderMilestones() {
@@ -102,7 +107,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchProject }, dispatch);
+  return bindActionCreators({ setTitle, fetchProject }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProjectsShow);

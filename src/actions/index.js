@@ -3,6 +3,10 @@ import axios from 'axios';
 const TOKEN = '6VeUAT4n2i5cF9f863vxjytn';
 const ROOT_URL = `http://localhost:3000/api/v1`;
 
+/** Page actions */
+export const SET_TITLE = 'SET_TITLE';
+
+/** Project actions */
 export const FETCH_PROJECT = 'FETCH_PROJECT';
 export const FETCH_PROJECTS = 'FETCH_PROJECTS';
 export const FETCH_MILESTONES = 'FETCH_MILESTONES';
@@ -46,5 +50,12 @@ export function fetchTasks(id) {
     type: FETCH_TASKS,
     payload: request,
     meta: { id }
+  }
+}
+
+export function setTitle(title) {
+  return {
+    type: SET_TITLE,
+    payload: title
   }
 }

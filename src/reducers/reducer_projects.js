@@ -17,6 +17,8 @@ export default function(state = INITIAL_STATE, action) {
       return { ...state, milestones: action.payload.data.milestones };
 
     case FETCH_TASKS:
+      // injects a collection of tasks on the milestone that
+      // matches the id we're using to fetch
       const milestones = state.project.milestones.map((milestone) => {
         if (milestone.id == action.meta.id) {
           return { ...milestone, tasks: action.payload.data.tasks }
