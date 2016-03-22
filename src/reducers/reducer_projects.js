@@ -1,6 +1,7 @@
 import { FETCH_PROJECT } from '../actions/index';
 import { FETCH_PROJECTS } from '../actions/index';
 import { FETCH_MILESTONES } from '../actions/index';
+import { FETCH_TASKS } from '../actions/index';
 
 const INITIAL_STATE = { all: [], project: null, milestones: [] };
 
@@ -14,6 +15,17 @@ export default function(state = INITIAL_STATE, action) {
 
     case FETCH_MILESTONES:
       return { ...state, milestones: action.payload.data.milestones };
+
+    case FETCH_TASKS:
+      const milestones = state.project.milestones.map((milestone) => {
+        if (milestone.id == action.meta.id) {
+          return { ...milestone, tasks: action.payload.data.tasks }
+        }
+        return milestone;
+      });
+      const project = { ...project, milestones };
+
+      return { ...state, project };
   }
 
   return state;
