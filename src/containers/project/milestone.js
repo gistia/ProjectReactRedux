@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import { fetchTasks } from '../actions/index';
+import TaskList from './task_list';
+import { fetchTasks } from '../../actions/index';
 
 class Milestone extends Component {
   constructor(props) {
@@ -18,58 +19,6 @@ class Milestone extends Component {
     }
 
     this.setState({showTasks: !this.state.showTasks});
-  }
-
-  renderTask(task) {
-    return (
-      <tr key={task.id} className="task">
-        <td>
-          <a>#{task.id}</a>
-        </td>
-        <td>
-          {task.name}
-        </td>
-        <td>
-          {task.status}
-        </td>
-        <td>
-          {task.points}
-        </td>
-        <td>
-          {task.user ? task.user.name : ''}
-        </td>
-        <td></td>
-      </tr>
-    )
-  }
-
-  renderTasks() {
-    const { tasks } = this.props.milestone;
-
-    if (!this.state.showTasks || !tasks) {
-      return <span></span>;
-    }
-
-    return (
-      <div className="tasks">
-        <table className="table task-table">
-          <thead>
-            <tr>
-              <th>#ID</th>
-              <th>Name</th>
-              <th>Status</th>
-              <th>Points</th>
-              <th>Assignee</th>
-              <th></th>
-            </tr>
-          </thead>
-
-          <tbody>
-            {tasks.map(t => this.renderTask(t))}
-          </tbody>
-        </table>
-      </div>
-    );
   }
 
   render() {
@@ -93,7 +42,7 @@ class Milestone extends Component {
             {milestone.name}
           </span>
 
-          {this.renderTasks()}
+          {this.state.showTasks ? <TaskList tasks={milestone.tasks} /> : null}
         </div>
       </article>
     );

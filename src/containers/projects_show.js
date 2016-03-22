@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
 
-import Milestone from './milestone';
+import Milestone from './project/milestone';
 import { setTitle } from '../actions/index';
 import { fetchProject } from '../actions/index';
 
