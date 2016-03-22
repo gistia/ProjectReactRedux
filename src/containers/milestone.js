@@ -22,7 +22,7 @@ class Milestone extends Component {
 
   renderTask(task) {
     return (
-      <tr className="task">
+      <tr key={task.id} className="task">
         <td>
           <a>#{task.id}</a>
         </td>
