@@ -3,12 +3,14 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import { updateTask } from '../../actions/index';
+import InlineEdit from '../../components/inline_edit';
 import TaskStatus from './task_status';
 
 class Task extends Component {
   constructor(props) {
     super(props);
     this.onUserChanged = this.onUserChanged.bind(this);
+    this.onTaskNameChange = this.onTaskNameChange.bind(this);
   }
 
   renderUserOptions() {
@@ -28,6 +30,13 @@ class Task extends Component {
     this.props.updateTask(task);
   }
 
+  onTaskNameChange(event) {
+    const { task } = this.props;
+    const { value } = event.target;
+
+    this.props.updateTask({ ...task, name: value });
+  }
+
   render() {
     const { task } = this.props;
 
@@ -37,15 +46,15 @@ class Task extends Component {
           <a>#{task.id}</a>
         </td>
         <td>
-          {task.name}
+          <InlineEdit value={task.name} onChange={this.onTaskNameChange} />
         </td>
-        <td>
+        <td className="small-column">
           <TaskStatus task={task} />
         </td>
-        <td>
+        <td className="small-column">
           {task.points}
         </td>
-        <td>
+        <td className="small-column">
           <select
             className="input form-control"
             onChange={this.onUserChanged}
@@ -54,7 +63,7 @@ class Task extends Component {
             {this.renderUserOptions()}
           </select>
         </td>
-        <td></td>
+        <td className="action"></td>
       </tr>
     );
   }

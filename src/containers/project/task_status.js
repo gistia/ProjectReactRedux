@@ -32,7 +32,7 @@ class TaskStatus extends Component {
     const isAccepted = this.is('accepted');
 
     return (
-      <div>
+      <div className="status-button">
         {canStart   ? <Button onClick={() => this.setStatus("started")} type="default" label="Start" /> : null}
         {canFinish  ? <Button onClick={() => this.setStatus("finished")} type="primary" label="Finish"/> : null}
         {canPause   ? <Button onClick={() => this.setStatus("pauseed")} type="default" label="Pause" /> : null}
