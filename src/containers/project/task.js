@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import { updateTask } from '../../actions/index';
+import TaskStatus from './task_status';
 
 class Task extends Component {
   constructor(props) {
@@ -29,7 +30,6 @@ class Task extends Component {
 
   render() {
     const { task } = this.props;
-    const userId = task.user ? task.user.id : null;
 
     return (
       <tr key={task.id} className="task">
@@ -40,7 +40,7 @@ class Task extends Component {
           {task.name}
         </td>
         <td>
-          {task.status}
+          <TaskStatus task={task} />
         </td>
         <td>
           {task.points}
@@ -49,8 +49,8 @@ class Task extends Component {
           <select
             className="input form-control"
             onChange={this.onUserChanged}
-            value={userId}>
-            <option value=""></option>
+            value={task.user_id}>
+            <option value=''></option>
             {this.renderUserOptions()}
           </select>
         </td>
