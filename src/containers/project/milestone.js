@@ -22,7 +22,7 @@ class Milestone extends Component {
   }
 
   render() {
-    const { milestone } = this.props;
+    const { project, milestone } = this.props;
 
     if (!milestone) {
       return <div></div>;
@@ -42,7 +42,8 @@ class Milestone extends Component {
             {milestone.name}
           </span>
 
-          {this.state.showTasks ? <TaskList tasks={milestone.tasks} /> : null}
+          {this.state.showTasks ?
+              <TaskList project={project} tasks={milestone.tasks} /> : null}
         </div>
       </article>
     );

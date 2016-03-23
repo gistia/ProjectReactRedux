@@ -4,13 +4,14 @@ import Task from './task';
 
 export default class TaskList extends Component {
   renderTasks() {
-    const { tasks } = this.props;
+    const { tasks, project } = this.props;
 
     if (!tasks) {
       return null;
     }
 
-    return tasks.map(task => <Task key={task.id} task={task} />);
+    return tasks
+      .map(task => <Task key={task.id} project={project} task={task} />);
   }
 
   render() {

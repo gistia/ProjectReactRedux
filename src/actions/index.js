@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import axios from 'axios';
 
 const TOKEN = '6VeUAT4n2i5cF9f863vxjytn';
@@ -11,6 +12,7 @@ export const FETCH_PROJECT = 'FETCH_PROJECT';
 export const FETCH_PROJECTS = 'FETCH_PROJECTS';
 export const FETCH_MILESTONES = 'FETCH_MILESTONES';
 export const FETCH_TASKS = 'FETCH_TASKS';
+export const UPDATE_TASK = 'UPDATE_TASK';
 
 export function fetchProject(id) {
   const url = `${ROOT_URL}/projects/${id}?private_token=${TOKEN}`
@@ -50,6 +52,19 @@ export function fetchTasks(id) {
     type: FETCH_TASKS,
     payload: request,
     meta: { id }
+  }
+}
+
+export function updateTask(taskObj) {
+  const { id, milestone_id } = taskObj;
+  const url = `${ROOT_URL}/milestones/${milestone_id}/tasks/${id}?private_token=${TOKEN}`
+  const task = _.pick(taskObj,
+    ['name', 'description', 'status', 'points', 'rate', 'user_id']);
+  const request = axios.put(url, { task });
+
+  return {
+    type: UPDATE_TASK,
+    payload: request
   }
 }
 

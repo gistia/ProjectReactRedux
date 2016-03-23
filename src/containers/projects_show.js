@@ -21,10 +21,14 @@ class ProjectsShow extends Component {
   }
 
   renderMilestones() {
-    const { project: { milestones } } = this.props;
+    const { project } = this.props;
+    const { milestones } = project;
 
     return milestones.map((milestone) => {
-      return <Milestone key={milestone.id} milestone={milestone} />;
+      return <Milestone
+               key={milestone.id}
+               project={project}
+               milestone={milestone} />;
     });
   }
 
