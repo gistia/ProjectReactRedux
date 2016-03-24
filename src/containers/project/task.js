@@ -10,7 +10,7 @@ class Task extends Component {
   constructor(props) {
     super(props);
     this.onUserChanged = this.onUserChanged.bind(this);
-    this.onTaskNameChange = this.onTaskNameChange.bind(this);
+    this.onTaskChange = this.onTaskChange.bind(this);
   }
 
   renderUserOptions() {
@@ -30,11 +30,16 @@ class Task extends Component {
     this.props.updateTask(task);
   }
 
-  onTaskNameChange(event) {
+  onTaskChange(attribute) {
     const { task } = this.props;
-    const { value } = event.target;
 
-    this.props.updateTask({ ...task, name: value });
+    return (event) => {
+      const { value } = event.target;
+      const newKey = {};
+      newKey[attribute] = value;
+
+      this.props.updateTask(Object.assign({}, task, newKey));
+    }
   }
 
   render() {
@@ -46,13 +51,18 @@ class Task extends Component {
           <a>#{task.id}</a>
         </td>
         <td>
-          <InlineEdit value={task.name} onChange={this.onTaskNameChange} />
+          <InlineEdit value={task.name} onChange={this.onTaskChange('name')} />
         </td>
         <td className="small-column">
           <TaskStatus task={task} />
         </td>
         <td className="small-column">
-          {task.points}
+          <InlineEdit
+            value={task.points}
+            numeric={true}
+            format="0"
+            suffix="points"
+            onChange={this.onTaskChange('points')} />
         </td>
         <td className="small-column">
           <select
