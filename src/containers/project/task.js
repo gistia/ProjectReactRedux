@@ -44,6 +44,7 @@ class Task extends Component {
 
   render() {
     const { task } = this.props;
+    let userId = task.user_id || '';
 
     return (
       <tr key={task.id} className="task">
@@ -68,7 +69,7 @@ class Task extends Component {
           <select
             className="input form-control"
             onChange={this.onUserChanged}
-            value={task.user_id}>
+            value={userId}>
             <option value=''></option>
             {this.renderUserOptions()}
           </select>
