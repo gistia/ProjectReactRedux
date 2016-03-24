@@ -43,12 +43,21 @@ function updateTask(state, action) {
 export default function(state = INITIAL_STATE, action) {
   switch (action.type) {
     case FETCH_PROJECT:
+      if (!action.payload.data) {
+        return state;
+      }
       return { ...state, project: action.payload.data.project };
 
     case FETCH_PROJECTS:
+      if (!action.payload.data) {
+        return state;
+      }
       return { ...state, all: action.payload.data.projects };
 
     case FETCH_TASKS:
+      if (!action.payload.data) {
+        return state;
+      }
       return updateTasks(state, action);
 
     case UPDATE_TASK:
