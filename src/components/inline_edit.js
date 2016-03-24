@@ -1,19 +1,34 @@
 import React, { Component } from 'react';
+import numeral from 'numeral';
 
 class DisplayWrapper extends Component {
   render() {
-    const { value, placeholder, prefix, suffix, onClick } = this.props;
+    const {
+      placeholder, numeric, format, prefix, suffix, onClick
+    } = this.props;
+    let { value } = this.props;
+    let classes = ['display'];
+
+    if (numeric) {
+      classes.push('align-right');
+    }
+
+    if (numeric && format) {
+      value = numeral(value).format(format);
+    }
+
+    classes = classes.join(' ');
 
     return (
       <div className="display-wrapper" onClick={onClick}>
         {prefix ? <span className="prefix">{prefix}</span> : null}
 
-        <span className="display">
+        <span className={classes}>
           {value}
         </span>
 
         {value ? null :
-          <span className="placeholder display">{placeholder}</span>}
+          <span className={`placeholder ${classes}`}>{placeholder}</span>}
 
         <span className="invisible">.</span>
 
@@ -47,6 +62,9 @@ class InputWrapper extends Component {
   onKeyDown(event) {
      if (event.keyCode === 13) {
        this.props.onApply(event);
+     }
+     if (event.keyCode === 27) {
+       this.props.onCancel(event);
      }
   }
 
