@@ -115,7 +115,6 @@ export default class InlineEdit extends Component {
   }
 
   render() {
-    const { value, placeholder, type, prefix, suffix } = this.props;
     const { isEditing } = this.state;
 
     return (

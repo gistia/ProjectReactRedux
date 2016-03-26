@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import {
   ToastContainer,
-  ToastMessage,
-} from "react-toastr";
+  ToastMessage
+} from 'react-toastr';
 
 const ToastMessageFactory = React.createFactory(ToastMessage.animation);
 

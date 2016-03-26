@@ -33,13 +33,13 @@ class TaskStatus extends Component {
 
     return (
       <div className="status-button">
-        {canStart   ? <Button onClick={() => this.setStatus("started")} type="default" label="Start" /> : null}
-        {canFinish  ? <Button onClick={() => this.setStatus("finished")} type="primary" label="Finish"/> : null}
-        {canPause   ? <Button onClick={() => this.setStatus("pauseed")} type="default" label="Pause" /> : null}
-        {canDeliver ? <Button onClick={() => this.setStatus("delivered")} type="warning" label="Deliver" /> : null}
-        {canAccept  ? <Button onClick={() => this.setStatus("accepted")} type="success" label="Accept" /> : null}
-        {canReject  ? <Button onClick={() => this.setStatus("rejected")} type="danger" label="Reject" /> : null}
-        {canRestart ? <Button onClick={() => this.setStatus("restarted")} type="default" label="Restart" /> : null}
+        {canStart   ? <Button onClick={() => this.setStatus('started')} type="default" label="Start" /> : null}
+        {canFinish  ? <Button onClick={() => this.setStatus('finished')} type="primary" label="Finish"/> : null}
+        {canPause   ? <Button onClick={() => this.setStatus('paused')} type="default" label="Pause" /> : null}
+        {canDeliver ? <Button onClick={() => this.setStatus('delivered')} type="warning" label="Deliver" /> : null}
+        {canAccept  ? <Button onClick={() => this.setStatus('accepted')} type="success" label="Accept" /> : null}
+        {canReject  ? <Button onClick={() => this.setStatus('rejected')} type="danger" label="Reject" /> : null}
+        {canRestart ? <Button onClick={() => this.setStatus('restarted')} type="default" label="Restart" /> : null}
         {isAccepted ? <Button type="success" label="Accepted" /> : null}
       </div>
     )

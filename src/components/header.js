@@ -26,13 +26,13 @@ export default class Header extends Component {
                     <ul className="dropdown-menu dropdown-menu-default">
                       <li>
                         <a ui-sref="profiles.my_profile">
-                          <i className='btr bt-user'></i> My Profile
+                          <i className="btr bt-user"></i> My Profile
                         </a>
                       </li>
                       <li className="divider"></li>
                       <li>
                         <a ng-click="ctrl.logout()">
-                          <i className='btr bt-sign-out'></i> Log Out
+                          <i className="btr bt-sign-out"></i> Log Out
                         </a>
                       </li>
                     </ul>
