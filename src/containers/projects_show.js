@@ -1,17 +1,12 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { Link } from 'react-router';
 
 import Milestone from './project/milestone';
 import { setTitle } from '../actions/index';
 import { fetchProject } from '../actions/index';
 
 class ProjectsShow extends Component {
-  // this injects the router into the React context,
-  // making it available as a component prop
-  static contextTypes = { router: PropTypes.object };
-
   componentWillMount() {
     this.props.fetchProject(this.props.params.id);
   }

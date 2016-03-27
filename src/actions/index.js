@@ -2,7 +2,7 @@ import _ from 'lodash';
 import axios from 'axios';
 
 const TOKEN = '6VeUAT4n2i5cF9f863vxjytn';
-const ROOT_URL = `http://localhost:3000/api/v1`;
+const ROOT_URL = 'http://localhost:3000/api/v1';
 
 /** Page actions */
 export const SET_TITLE = 'SET_TITLE';

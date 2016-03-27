@@ -14,7 +14,7 @@ class Task extends Component {
   }
 
   renderUserOptions() {
-    const { task, project } = this.props;
+    const { project } = this.props;
 
     return project.members.map((member) => {
       return <option
@@ -70,7 +70,7 @@ class Task extends Component {
             className="input form-control"
             onChange={this.onUserChanged}
             value={userId}>
-            <option value=''></option>
+            <option value=""></option>
             {this.renderUserOptions()}
           </select>
         </td>
