@@ -27,5 +27,10 @@ describe('Milestone' , () => {
     it('shows the tasks area', () => {
       expect(component.find('.tasks')).to.be.visible;
     });
+
+    it('hides the tasks area when clicked again', () => {
+      component.find('.milestone-task-toggler').simulate('click');
+      expect(component.find('.tasks')).to.not.be.visible;
+    });
   });
 });
