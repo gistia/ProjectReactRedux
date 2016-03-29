@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { updateTask } from '../../actions/index';
 import Button from '../../components/button';
 
-class TaskStatus extends Component {
+export class TaskStatus extends Component {
   is(...status) {
     const { task } = this.props;
     return status.indexOf(task.status) > -1;
@@ -39,7 +39,7 @@ class TaskStatus extends Component {
         {canDeliver ? <Button onClick={() => this.setStatus('delivered')} type="warning" label="Deliver" /> : null}
         {canAccept  ? <Button onClick={() => this.setStatus('accepted')} type="success" label="Accept" /> : null}
         {canReject  ? <Button onClick={() => this.setStatus('rejected')} type="danger" label="Reject" /> : null}
-        {canRestart ? <Button onClick={() => this.setStatus('restarted')} type="default" label="Restart" /> : null}
+        {canRestart ? <Button onClick={() => this.setStatus('started')} type="default" label="Restart" /> : null}
         {isAccepted ? <Button type="success" label="Accepted" /> : null}
       </div>
     )
