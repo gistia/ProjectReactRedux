@@ -2,3 +2,5 @@
 bundle.js
 npm-debug.log
 build
+selenium-debug.log
+reports

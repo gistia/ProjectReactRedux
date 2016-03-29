@@ -27,7 +27,7 @@ class ProjectsList extends Component {
           >
           <div className="widget-thumb widget-bg-color-white text-uppercase margin-bottom-20">
             <Link to={`/projects/${project.id}`}>
-              <h4 className="widget-thumb-heading">
+              <h4 className="project-name widget-thumb-heading">
                 {project.name}
               </h4>
               <span className="label label-success">

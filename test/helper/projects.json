@@ -1,0 +1,361 @@
+{
+   "projects" : [
+      {
+         "milestones" : [
+            {
+               "budget" : "9000.0",
+               "max_hours" : null,
+               "total_amount" : "13350.0",
+               "end_date" : null,
+               "total_hours" : "89.0",
+               "start_date" : null,
+               "name" : "Sprint 1",
+               "id" : 10,
+               "position" : 1,
+               "project_id" : 7
+            },
+            {
+               "id" : 29,
+               "position" : 2,
+               "project_id" : 7,
+               "start_date" : null,
+               "name" : "Sprint 2 - Code Review Feedback",
+               "total_amount" : "3225.0",
+               "end_date" : null,
+               "total_hours" : "21.5",
+               "budget" : "9000.0",
+               "max_hours" : null
+            },
+            {
+               "budget" : null,
+               "max_hours" : null,
+               "total_amount" : "1125.0",
+               "end_date" : null,
+               "total_hours" : "7.5",
+               "start_date" : null,
+               "name" : "Sprint 3 - Code Review Feedback, round 2",
+               "id" : 31,
+               "position" : 3,
+               "project_id" : 7
+            },
+            {
+               "total_hours" : "1.5",
+               "end_date" : null,
+               "total_amount" : "225.0",
+               "max_hours" : null,
+               "budget" : null,
+               "project_id" : 7,
+               "position" : 4,
+               "id" : 32,
+               "name" : "Sprint 4 - Code Review Feedback, round 3",
+               "start_date" : null
+            }
+         ],
+         "id" : 7,
+         "members" : [
+            {
+               "project_id" : 7,
+               "id" : 31,
+               "name" : "Carlos Taborda",
+               "email" : "ctaborda@gmail.com",
+               "user_id" : 5,
+               "avatar_url" : "http://gravatar.com/avatar/5ea1fc922fb818676f7faac3fb630375.png?s=150&d=mm",
+               "username" : "carlos.taborda1",
+               "role" : "developer",
+               "rate" : null,
+               "user" : {
+                  "slack_user" : null,
+                  "avatar_url" : "http://gravatar.com/avatar/5ea1fc922fb818676f7faac3fb630375.png?s=150&d=mm",
+                  "username" : "carlos.taborda1",
+                  "role" : "developer",
+                  "email" : "ctaborda@gmail.com",
+                  "name" : "Carlos Taborda",
+                  "private_token" : "zHj5UzfzJxFqLCmYVA73WFCK",
+                  "id" : 5
+               }
+            },
+            {
+               "rate" : null,
+               "avatar_url" : "http://gravatar.com/avatar/16e51544c558db6d4ce8bcb7ae7d088a.png?s=150&d=mm",
+               "username" : "marcus.blankenship",
+               "role" : "developer",
+               "user" : {
+                  "role" : "developer",
+                  "username" : "marcus.blankenship",
+                  "avatar_url" : "http://gravatar.com/avatar/16e51544c558db6d4ce8bcb7ae7d088a.png?s=150&d=mm",
+                  "slack_user" : null,
+                  "id" : 10,
+                  "email" : "marcus@gistia.com",
+                  "private_token" : "rh1sS6hip99WWotLukmZ6bS1",
+                  "name" : "Marcus Blankenship"
+               },
+               "id" : 32,
+               "project_id" : 7,
+               "email" : "marcus@gistia.com",
+               "user_id" : 10,
+               "name" : "Marcus Blankenship"
+            },
+            {
+               "user_id" : 9,
+               "email" : "felipe.iketani@gistia.com",
+               "name" : "Felipe Iketani",
+               "id" : 33,
+               "project_id" : 7,
+               "user" : {
+                  "private_token" : "W1wcoBcfxRaAaeyS6SJpwHu6",
+                  "name" : "Felipe Iketani",
+                  "email" : "felipe.iketani@gistia.com",
+                  "id" : 9,
+                  "slack_user" : null,
+                  "username" : "felipe.iketani",
+                  "role" : "developer",
+                  "avatar_url" : "http://gravatar.com/avatar/15acb87142a8f5c75026627cb9c1afb4.png?s=150&d=mm"
+               },
+               "rate" : null,
+               "username" : "felipe.iketani",
+               "role" : "developer",
+               "avatar_url" : "http://gravatar.com/avatar/15acb87142a8f5c75026627cb9c1afb4.png?s=150&d=mm"
+            },
+            {
+               "name" : "Diego Oliveira",
+               "email" : "diego@gistia.com",
+               "user_id" : 6,
+               "project_id" : 7,
+               "id" : 34,
+               "user" : {
+                  "name" : "Diego Oliveira",
+                  "private_token" : "wnAJJcCFCKWVFKZNJRStHQsM",
+                  "email" : "diego@gistia.com",
+                  "id" : 6,
+                  "slack_user" : null,
+                  "avatar_url" : "http://gravatar.com/avatar/4254d4988a2fae75f8d5f343e6907d5d.png?s=150&d=mm",
+                  "username" : "diego.oliveira",
+                  "role" : "developer"
+               },
+               "avatar_url" : "http://gravatar.com/avatar/4254d4988a2fae75f8d5f343e6907d5d.png?s=150&d=mm",
+               "username" : "diego.oliveira",
+               "role" : "developer",
+               "rate" : null
+            },
+            {
+               "name" : "Douglas Barbosa",
+               "user_id" : 2,
+               "email" : "douglas@gistia.com",
+               "project_id" : 7,
+               "id" : 35,
+               "user" : {
+                  "email" : "douglas@gistia.com",
+                  "private_token" : "c5ryWy48J16znEykcVoA2Ugz",
+                  "name" : "Douglas Barbosa",
+                  "id" : 2,
+                  "slack_user" : "dbalexandre",
+                  "username" : "douglas",
+                  "role" : "developer",
+                  "avatar_url" : "http://gravatar.com/avatar/59e0789e0a5fc996da00c4930ada784b.png?s=150&d=mm"
+               },
+               "username" : "douglas",
+               "role" : "developer",
+               "avatar_url" : "http://gravatar.com/avatar/59e0789e0a5fc996da00c4930ada784b.png?s=150&d=mm",
+               "rate" : null
+            },
+            {
+               "id" : 36,
+               "project_id" : 7,
+               "user_id" : 12,
+               "email" : "felipe.coury@gmail.com",
+               "name" : "Felipe Coury",
+               "rate" : null,
+               "role" : "developer",
+               "username" : "fcoury",
+               "avatar_url" : "http://gravatar.com/avatar/c4ceadae4f61dac8ff3ababc3faa6c42.png?s=150&d=mm",
+               "user" : {
+                  "avatar_url" : "http://gravatar.com/avatar/c4ceadae4f61dac8ff3ababc3faa6c42.png?s=150&d=mm",
+                  "username" : "fcoury",
+                  "role" : "developer",
+                  "slack_user" : "fcoury",
+                  "id" : 12,
+                  "email" : "felipe.coury@gmail.com",
+                  "name" : "Felipe Coury",
+                  "private_token" : "6VeUAT4n2i5cF9f863vxjytn"
+               }
+            }
+         ],
+         "basecamp_id" : null,
+         "slack_channel" : "",
+         "pivotal_id" : null,
+         "status" : "archived",
+         "name" : "Activities Framework",
+         "rate" : "150.0",
+         "budget" : null,
+         "active_milestone" : {
+            "budget" : null,
+            "max_hours" : null,
+            "total_amount" : null,
+            "end_date" : null,
+            "total_hours" : null,
+            "start_date" : null,
+            "name" : "Sprint 4 - Code Review Feedback, round 3",
+            "id" : 32,
+            "position" : 4,
+            "project_id" : 7
+         },
+         "mavenlink_id" : null
+      },
+      {
+         "rate" : null,
+         "active_milestone" : {
+            "total_amount" : null,
+            "end_date" : null,
+            "total_hours" : null,
+            "budget" : null,
+            "max_hours" : null,
+            "id" : 13,
+            "position" : 1,
+            "project_id" : 11,
+            "start_date" : null,
+            "name" : "Discovery"
+         },
+         "budget" : null,
+         "mavenlink_id" : null,
+         "members" : [
+            {
+               "user" : {
+                  "slack_user" : null,
+                  "username" : "marcus.blankenship",
+                  "role" : "developer",
+                  "avatar_url" : "http://gravatar.com/avatar/16e51544c558db6d4ce8bcb7ae7d088a.png?s=150&d=mm",
+                  "email" : "marcus@gistia.com",
+                  "private_token" : "rh1sS6hip99WWotLukmZ6bS1",
+                  "name" : "Marcus Blankenship",
+                  "id" : 10
+               },
+               "username" : "marcus.blankenship",
+               "role" : "developer",
+               "avatar_url" : "http://gravatar.com/avatar/16e51544c558db6d4ce8bcb7ae7d088a.png?s=150&d=mm",
+               "rate" : null,
+               "name" : "Marcus Blankenship",
+               "user_id" : 10,
+               "email" : "marcus@gistia.com",
+               "project_id" : 11,
+               "id" : 44
+            },
+            {
+               "user" : {
+                  "slack_user" : null,
+                  "role" : "developer",
+                  "username" : "felipe.iketani",
+                  "avatar_url" : "http://gravatar.com/avatar/15acb87142a8f5c75026627cb9c1afb4.png?s=150&d=mm",
+                  "private_token" : "W1wcoBcfxRaAaeyS6SJpwHu6",
+                  "name" : "Felipe Iketani",
+                  "email" : "felipe.iketani@gistia.com",
+                  "id" : 9
+               },
+               "rate" : null,
+               "role" : "developer",
+               "username" : "felipe.iketani",
+               "avatar_url" : "http://gravatar.com/avatar/15acb87142a8f5c75026627cb9c1afb4.png?s=150&d=mm",
+               "user_id" : 9,
+               "email" : "felipe.iketani@gistia.com",
+               "name" : "Felipe Iketani",
+               "id" : 45,
+               "project_id" : 11
+            },
+            {
+               "project_id" : 11,
+               "id" : 46,
+               "name" : "Diego Oliveira",
+               "email" : "diego@gistia.com",
+               "user_id" : 6,
+               "avatar_url" : "http://gravatar.com/avatar/4254d4988a2fae75f8d5f343e6907d5d.png?s=150&d=mm",
+               "role" : "developer",
+               "username" : "diego.oliveira",
+               "rate" : null,
+               "user" : {
+                  "slack_user" : null,
+                  "avatar_url" : "http://gravatar.com/avatar/4254d4988a2fae75f8d5f343e6907d5d.png?s=150&d=mm",
+                  "role" : "developer",
+                  "username" : "diego.oliveira",
+                  "email" : "diego@gistia.com",
+                  "name" : "Diego Oliveira",
+                  "private_token" : "wnAJJcCFCKWVFKZNJRStHQsM",
+                  "id" : 6
+               }
+            },
+            {
+               "rate" : null,
+               "avatar_url" : "http://gravatar.com/avatar/59e0789e0a5fc996da00c4930ada784b.png?s=150&d=mm",
+               "username" : "douglas",
+               "role" : "developer",
+               "user" : {
+                  "username" : "douglas",
+                  "role" : "developer",
+                  "avatar_url" : "http://gravatar.com/avatar/59e0789e0a5fc996da00c4930ada784b.png?s=150&d=mm",
+                  "slack_user" : "dbalexandre",
+                  "id" : 2,
+                  "email" : "douglas@gistia.com",
+                  "private_token" : "c5ryWy48J16znEykcVoA2Ugz",
+                  "name" : "Douglas Barbosa"
+               },
+               "id" : 47,
+               "project_id" : 11,
+               "email" : "douglas@gistia.com",
+               "user_id" : 2,
+               "name" : "Douglas Barbosa"
+            },
+            {
+               "email" : "felipe.coury@gmail.com",
+               "user_id" : 12,
+               "name" : "Felipe Coury",
+               "id" : 48,
+               "project_id" : 11,
+               "user" : {
+                  "slack_user" : "fcoury",
+                  "role" : "developer",
+                  "username" : "fcoury",
+                  "avatar_url" : "http://gravatar.com/avatar/c4ceadae4f61dac8ff3ababc3faa6c42.png?s=150&d=mm",
+                  "email" : "felipe.coury@gmail.com",
+                  "private_token" : "6VeUAT4n2i5cF9f863vxjytn",
+                  "name" : "Felipe Coury",
+                  "id" : 12
+               },
+               "rate" : null,
+               "avatar_url" : "http://gravatar.com/avatar/c4ceadae4f61dac8ff3ababc3faa6c42.png?s=150&d=mm",
+               "role" : "developer",
+               "username" : "fcoury"
+            }
+         ],
+         "milestones" : [
+            {
+               "project_id" : 11,
+               "position" : 1,
+               "id" : 13,
+               "name" : "Discovery",
+               "start_date" : null,
+               "total_hours" : "4.0",
+               "end_date" : null,
+               "total_amount" : "0.0",
+               "max_hours" : null,
+               "budget" : null
+            },
+            {
+               "position" : 2,
+               "project_id" : 11,
+               "id" : 12,
+               "name" : "Sprint 1",
+               "start_date" : null,
+               "total_hours" : "23.0",
+               "total_amount" : "0.0",
+               "end_date" : null,
+               "max_hours" : null,
+               "budget" : null
+            }
+         ],
+         "id" : 11,
+         "name" : "Angular Admin",
+         "basecamp_id" : null,
+         "pivotal_id" : null,
+         "slack_channel" : null,
+         "status" : "paused"
+      }
+   ]
+}

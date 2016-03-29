@@ -47,7 +47,7 @@ class Task extends Component {
     let userId = task.user_id || '';
 
     return (
-      <tr key={task.id} className="task">
+      <tr key={task.id} className={`task task-${task.id}`}>
         <td>
           <a>#{task.id}</a>
         </td>
