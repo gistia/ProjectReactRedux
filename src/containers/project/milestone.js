@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import TaskList from './task_list';
 import { fetchTasks } from '../../actions/index';
 
-class Milestone extends Component {
+export class Milestone extends Component {
   constructor(props) {
     super(props);
     this.state = {showTasks: false};
@@ -32,13 +32,13 @@ class Milestone extends Component {
       <article className="milestone">
         <div>
           <span className="expander column small-column">
-            <a onClick={this.onMilestoneClicked.bind(this)}>
+            <a onClick={this.onMilestoneClicked.bind(this)} className="milestone-task-toggler">
               {this.state.showTasks ? null : <i className="fa fa-caret-right"></i>}
               {this.state.showTasks ? <i className="fa fa-caret-down"></i> : null}
             </a>
           </span>
 
-          <span className="column large-column">
+          <span className="column large-column milestone-name">
             {milestone.name}
           </span>
 
