@@ -14,3 +14,9 @@
 
 - [Axios](https://github.com/mzabriskie/axios) 0.9.1
 - [Lodash](https://lodash.com/) 3.10.1
+
+## Testing
+
+- [Nightwatch]
+- [Mocha]
+- [Chai]
