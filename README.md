@@ -1,5 +1,7 @@
 # ProjektReactRedux
 
+[ ![Codeship Status for gistia/ProjektReactRedux](https://codeship.com/projects/f88dbdd0-d83a-0133-8dc8-461df0797546/status?branch=master)](https://codeship.com/projects/143162)
+
 ## Libraries
 
 ### Core
