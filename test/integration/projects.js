@@ -1,4 +1,36 @@
+var apiServer;
+var appServer;
+
 module.exports = {
+  before: function() {
+    var exec = require('child_process').exec;
+
+    // start fake API server
+    console.log('Starting Fake API server...');
+    apiServer = exec('node test/helper/dummy-api.js', function(error, stdout, stderr) {
+      console.log('error', error);
+      console.log('stdout', stdout);
+      console.log('stderr', stderr);
+    });
+
+    console.log('Starting app server...');
+    appServer = exec('npm start', function(error, stdout, stderr) {
+      console.log('error', error);
+      console.log('stdout', stdout);
+      console.log('stderr', stderr);
+    });
+  },
+
+  after: function() {
+    console.log('Shutting down API server...');
+    apiServer.kill();
+
+    console.log('Shutting down app server...');
+    appServer.kill();
+
+    process.exit(0);
+  },
+
   'Choosing a project': function(browser) {
     browser
       .url('http://localhost:8080')
